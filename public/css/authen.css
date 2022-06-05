@@ -1,0 +1,111 @@
+body{
+    background-color:  #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-wrapper{
+    width: 700px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+}
+
+.register-form{
+    padding: 50px;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register-form input{
+    outline: none;
+    border: none;
+}
+
+.register-form__heading{
+    color: var(--text-color);
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.register-form__username,.register-form__email,.register-form__password,.register-form__numberPhone{
+    font-size: 1.6rem;
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #999;
+}
+
+.register-form--icon{
+    margin-right: 8px;
+}
+
+.register-cover{
+    flex: 0 0 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(136deg, rgb(240, 248, 255) -1%, rgb(219, 238, 255) 85%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.register-cover__img{
+    width: 203px;
+    height: 203px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.register-cover__text {
+    color: #4d4d4d;
+    font-size: 17px;
+    font-weight: bold;
+}
+.register-form__btn {
+    background-color: transparent;
+    margin-top: 10px;
+    padding: 16px 0;
+    outline: none;
+    border: none;
+    text-align: left;
+}
+.register-form__btn span{
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.3rem;
+}
+.register-form__btn a{
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.register-form__btn span:hover{
+    background-color: #58a1f3;
+}
+
+.register-form__btn--sub span{
+    margin-left: 10px;
+    background-color: rgb(255, 66, 78);
+}
+.register-form__btn--sub a{
+    margin-left: 10px;
+    background-color: rgb(255, 66, 78);
+    text-decoration: none;
+}

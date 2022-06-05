@@ -1,0 +1,42 @@
+<% layout('layout/authenBoilerplate') %> 
+<div class="register-wrapper">
+    <form action="/register" method="post" class="register-form">
+        <h3 class="register-form__heading">Sign Up</h3>
+        <div class="register-form__username">
+            <i class="register-form--icon fas fa-user"></i>
+            <input type="text" name="username" placeholder="Your username" class="register-form__name--input">
+        </div>
+        <div class="register-form__username">
+            <i class="register-form--icon far fa-user-circle"></i>
+            <input type="text" name="fullName" placeholder="Your fullname" class="register-form__name--input">
+        </div>
+        <div class="register-form__email">
+            <i class="register-form--icon fas fa-envelope-square"></i>
+            <input type="text" name="email" placeholder="Your email">
+        </div>
+        <div class="register-form__username">
+            <i class="register-form--icon fas fa-address-card"></i>
+            <input type="text" name="address" placeholder="Your address">
+        </div>
+        <div class="register-form__numberPhone">
+            <i class="register-form--icon fas fa-phone"></i>
+            <input type="text" name="numberPhone" placeholder="Your Number Phone">
+        </div>
+        <div class="register-form__password">
+            <i class="register-form--icon fas fa-lock"></i>
+            <input type="text" name="password" placeholder="Your password">
+        </div>
+        <div class="button-group">
+            <button type="submit" class="register-form__btn">
+                <span>Register</span>
+            </button>
+            <button class="register-form__btn register-form__btn--sub">
+                <a href="/login">Login</a>
+            </button>
+        </div>
+    </form>
+    <div class="register-cover" >
+        <img class="register-cover__img" src="/img/wolf-removebg-preview.png" alt="">
+        <p class="register-cover__text">Hãy đăng kí để mua sắm nào!</p>
+    </div>
+</div>

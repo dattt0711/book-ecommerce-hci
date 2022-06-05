@@ -1,0 +1,53 @@
+<% layout('layout/adminBoilerplate') %> 
+        <h3 class="main-content__heading">ORDERS LIST</h3>
+        <div class="sticky-table" style="height:660px; overflow:auto">
+            <table class="product__table" >
+            <thead class="product__table-heading">
+                <tr class="product__table-heading-row">
+                    <th>Tài khoản</th>                                          
+                    <th>Họ tên đầy đủ</th>       
+                    <th>Vai trò tài khoản</th>
+                </tr>
+            </thead>
+            <tbody class="product__table-body">
+                <% for(let i=0;i<users.length;i++){ %> 
+                <tr class="cart-body__row">
+                    <td style="width: 30%">
+                        <div class="cart-body__product">
+                        <%=users[i].username%> 
+                        </div>
+                    </td>
+                    <td style="width: 30%">
+                        <div class="cart-body__product">
+                            <%=users[i].fullName%> 
+                        </div>
+                    </td>
+                    <td style="width: 40%">
+                        <div class="cart-body__product">
+                            <select data-id="<%=users[i]._id%>" class="cart-body__product-status" name="role">                          
+                            <option <%=users[i].role=='SALE'?'selected':''%>> SALE </option>
+                            <option <%=users[i].role=='USER'?'selected':''%>> USER </option>
+                            </select>
+                        </div>
+                    </td> 
+                </tr>
+                <% } %> 
+            </tbody>
+            </table>
+        </div>
+<script>
+    document.querySelectorAll('.cart-body__product-status').forEach(e=>{
+        e.addEventListener('change', async function(){
+        let newRole = e.value;
+        let id = e.getAttribute('data-id');
+        await fetch(`http://localhost:3000/admin/${id}/changeRole`,{
+            method: 'POST',
+            headers:{
+            "Content-Type": 'application/json',
+            'Accept': 'application/json',
+            },
+            body: JSON.stringify({role: newRole})
+            });
+    })
+})
+</script>
